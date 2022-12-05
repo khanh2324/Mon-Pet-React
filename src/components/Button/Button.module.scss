@@ -1,0 +1,130 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    padding: 9px 16px;
+    font-size: 1.6rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--white);
+    // border: 1px solid transparent;
+    user-select: none;
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+
+    //Disabled
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+}
+
+// Button types
+.rounded {
+    border-radius: 30px;
+    padding: 15px 33px;
+    font-size: 1.5rem;
+    user-select: none;
+    transition: 0.3s;
+    transform-origin: center;
+    border: 2px solid var(--black);
+    font-weight: 600;
+    color: var(--black);
+}
+
+.primary {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: var(--primary);
+
+    &:hover {
+        border-color: var(--primary);
+        background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.06),
+                rgba(0, 0, 0, 0.06)
+            ),
+            #fe2c55;
+    }
+}
+
+.outline {
+    padding: 24px 20px;
+    color: var(--white);
+    font-weight: 400;
+    background-color: #1c1c1c;
+    transition: color 0.3s;
+
+    &:hover {
+        color: #13aff0;
+        span{
+            &::before{
+                display: block;
+            }
+        }
+    }
+
+    span {
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            height: 1.5px;
+            width: 100%;
+            top: 26px;
+            background-color: #1e73be;
+            display: none;
+            animation: lineNav ease 0.3s;
+            will-change: opacity, transform;
+        }
+    }
+}
+
+.outline.active{
+    color: #1e73be;
+}
+
+@keyframes lineNav {
+    0% {
+        opacity: 0;
+        left: 0px;
+        top: 18px;
+    }
+    100% {
+        opacity: 1;
+        left: 0px;
+        top: 26px;
+    }
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+//Button size
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+
+.large {
+    min-width: 140px;
+    padding: 14px 16px;
+}

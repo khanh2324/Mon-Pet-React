@@ -1,0 +1,50 @@
+.commit{
+    background-color: #f7f7f7;
+    text-align: center;
+    padding-bottom: 92px;
+}
+
+.commit-header{
+    font-size: 4.2rem;
+    color: #333;
+    line-height: 48px;
+    font-weight: 600;
+    padding-top: 60px;
+}
+
+.commit-text{
+    font-size: 2.0rem;
+    color: #595959;
+    line-height: 3.6rem;
+    padding: 20px 0;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.commit__content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.commit__content-icon{
+    margin-bottom: 26px;
+
+}
+
+.commit__content-header{
+    font-size: 2.2rem;
+    line-height:3.0rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.commit__content-text{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 3.0rem;
+    font-weight: 600;
+}
