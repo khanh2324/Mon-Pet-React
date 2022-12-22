@@ -1,5 +1,9 @@
 import classNames from "classnames/bind";
+import { Link } from "react-router-dom";
 import styles from "./LinkProduct.module.scss";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import config from "~/config";
 import Button from "~/components/Button";
@@ -10,12 +14,15 @@ const cx = classNames.bind(styles);
 
 function LinkProduct() {
     return (
-        <div className={cx("link__product")}>
-            <div className={cx("row col link__product-container")}>
-                <div className={cx("col l-6 c-12 link__product-wrap")}>
-                    <a href="" className={cx("link__product-logo")}>
-                        {/* <img src="./assets/img/logo/aeon_eshop.png" alt=""> */}
-                    </a>
+        <Container className={cx("link__product")}>
+            <Row className={cx("link__product-container")}>
+                <Col sm={12} md={6} className={cx("link__product-wrap")}>
+                    <Link to={config.routes.news} className={cx("link__product-logo")}>
+                        <Image
+                            src={images.logoAEON}
+                            alt="AEON"
+                        />
+                    </Link>
                     <div className={cx("link__product-heading")}>
                         <h3 className={cx("link__product-header")}>
                             Đồ dùng Pet Độc lạ
@@ -27,21 +34,19 @@ function LinkProduct() {
                         <span>hay ho, độc lạ</span> tại AEON-ESHOP
                     </div>
                     <div className={cx("link__product-btn")}>
-                        <a
-                            href=""
-                            className={cx(
-                                "link__product-btn_click btn-invalid"
-                            )}
-                        >
+                        <Button className={cx('invalid')} href="https://bom.so/Q2SCfh">
                             Click đây
-                        </a>
+                        </Button>
                     </div>
-                </div>
+                </Col>
 
-                <div className={cx("col l-6 c-12 link__product-wrap")}>
-                    <a href="" className={cx("link__product-logo")}>
-                        {/* <img src="./assets/img/logo/lazada.png" alt=""> */}
-                    </a>
+                <Col sm={12} md={6} className={cx("link__product-wrap")}>
+                    <Link to={config.routes.news} className={cx("link__product-logo")}>
+                        <Image
+                            src={images.logoLazada}
+                            alt="AEON"
+                        />
+                    </Link>
                     <div className={cx("link__product-heading")}>
                         <h3 className={cx("link__product-header")}>
                             Đồ dùng Chăm sóc thú cưng
@@ -53,19 +58,19 @@ function LinkProduct() {
                         <span>giá rẻ</span> tại Lazada
                     </div>
                     <div className={cx("link__product-btn")}>
-                        <a href="" className={cx("link__product-btn_click")}>
+                        <Button href="https://bom.so/D2oyiU">
                             Click đây
-                        </a>
+                        </Button>
                     </div>
-                </div>
-            </div>
-            <div class="link__product-text-about">
+                </Col>
+            </Row>
+            <div className={cx('link__product-text-about')}>
                 <i>
                     (Mua hàng online tại đây là lợi nhuận và động lực rất lớn để
                     Mon’s Pet cung cấp nhiều nội dung chất lượng hơn)
                 </i>
             </div>
-        </div>
+        </Container>
     );
 }
 

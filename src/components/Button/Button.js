@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import classNames from 'classnames/bind';
 import styles from './Button.module.scss';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react'
 
 const cx = classNames.bind(styles);
 
@@ -11,6 +12,10 @@ function Button({
     active = false,
     primary = false,
     outline = false,
+    noBefore = false,
+    subnav = false,
+    mobile = false,
+    scroll = false,
     text = false,
     rounded = false,
     disabled = false,
@@ -23,6 +28,27 @@ function Button({
     onClick,
     ...passProps
 }) {
+    const [showBtnScroll ,setShowBtnScroll] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () =>{
+            if(window.scrollY >= 200){
+                setShowBtnScroll(true);
+            } else {
+                setShowBtnScroll(false);
+            }
+            //hoặc có thể viết setShowBtnScroll(window.scrollY >= 200);
+        }
+    
+        window.addEventListener('scroll', handleScroll);
+        //Cleanup function
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [])
+    
+
+
     let Comp = 'button';
     //  xử lý vơi các trương hop the a hoac link
     const props = {
@@ -51,6 +77,10 @@ function Button({
         active,
         primary,
         outline,
+        noBefore,
+        subnav,
+        mobile,
+        scroll,
         small,
         large,
         text,
@@ -60,13 +90,32 @@ function Button({
     });
 
     return (
-        <Comp className={classes} {...props}>
-            <span className={cx('title')}>
-                {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
-                {children}
-                {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
-            </span>
-        </Comp>
+
+        <>
+            { scroll  ? (
+                <>
+                    {showBtnScroll && (
+                        <Comp className={classes} {...props}>
+                            <span className={cx('title')}>
+                                {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+                                {children}
+                                {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
+                            </span>
+                        </Comp>
+                    )}
+                </>
+            ) : (
+               <>
+                    <Comp className={classes} {...props}>
+                        <span className={cx('title')}>
+                            {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+                            {children}
+                            {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
+                        </span>
+                    </Comp>
+               </>
+            )}
+        </>
     );
 }
 
@@ -76,6 +125,10 @@ Button.propTypes = {
     active: PropTypes.bool,
     primary: PropTypes.bool,
     outline: PropTypes.bool,
+    noBefore: PropTypes.bool,
+    subnav: PropTypes.bool,
+    mobile: PropTypes.bool,
+    scroll: PropTypes.bool,
     text: PropTypes.bool,
     rounded: PropTypes.bool,
     disabled: PropTypes.bool,

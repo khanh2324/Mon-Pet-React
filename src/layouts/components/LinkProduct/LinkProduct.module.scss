@@ -10,7 +10,7 @@
 }
 
 .link__product-wrap{
-    padding: 16px 0;
+    padding-top: 26px;
 }
 
 .link__product-logo{
@@ -38,7 +38,7 @@
     line-height: 3.0rem;
     font-size: 1.6rem;
     font-weight: 500;
-    margin: 16px 0;
+    margin: 16px;
     font-family: 'Arial', sans-serif;
 }
 
@@ -53,23 +53,8 @@
     width: 125px;
 }
 
-.link__product-btn_click{
-    font-size: 1.6rem;
-    padding: 12px 30px;
-    color: var(--white-color);
-    background-color: #1e3b4d;
-    font-weight: 600;
-    border-radius: 5px;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
 .link__product-btn:hover{
     transform: scale(1.1);
-}
-
-.btn-invalid{
-    background-color: #b41e81;
 }
 
 .link__product-text-about{

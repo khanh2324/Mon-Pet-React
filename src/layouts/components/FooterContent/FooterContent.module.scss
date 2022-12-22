@@ -1,0 +1,82 @@
+.footer__content{
+    background-color: #222222;
+}
+
+.footer__content-container{
+    padding: 28px 0 36px 0;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.footer__content-logo img{
+    width: 85%;
+}
+
+.footer__content-text{
+    margin: 28px 16px 0 0;
+    font-weight: 500;
+    line-height: 3.2rem;
+    letter-spacing: 0.3px;
+    text-align: justify;
+    color: #919191;
+}
+
+.footer-page-header{
+    color: var(--white);
+    position: relative;
+    top: 0;
+    left: 16px;
+    font-weight: 500;
+    padding-bottom: 16px;
+}
+
+.footer-page-header::before{
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 2px;
+    top: 2px;
+    left: -16px;
+    background-color: #13aff0;
+}
+
+.footer-page-list{
+    list-style: none;
+}
+
+.footer-list-page-item{
+    padding: 16px 0;
+    border-bottom: 1px solid var(--white);
+}
+
+.footer-list-page-item:first-child{
+    border-top: 1px solid var(--white);
+}
+
+.footer-list-page-link{
+    color: #b8b8b8;
+    transition: 0.2s;
+    user-select: none;
+    font-weight: 500;
+}
+
+.footer-list-page-link:hover{
+    color: #1e73be;
+}
+
+.footer-page-license{
+    font-weight: 500;
+    color: #919191;
+    padding: 18px 0;
+    margin-left: 18px;
+}
+
+.footer-page-license-img{
+    margin-left: 16px;
+    padding-bottom: 24px;
+}
+
+.footer-link-page iframe{
+    width: -webkit-fill-available;
+}

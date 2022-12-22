@@ -1,5 +1,6 @@
 .slider{
     position: relative;
+    height: 700px;
 }
 
 .slider::before{
@@ -14,10 +15,10 @@
     left: 0;
 }
 
-
 .slider-image{
     width: 100%;
-    object-fit: contain;
+    height: 700px;
+    object-fit: cover;
 }
 
 .slider-text{

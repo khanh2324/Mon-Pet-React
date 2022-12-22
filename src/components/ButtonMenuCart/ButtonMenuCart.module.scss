@@ -1,0 +1,41 @@
+.btn-menu-cart{
+    position: fixed;
+    bottom: 130px;
+    right: 77px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    opacity: 0;
+}
+
+.btn-cart{
+    position: fixed;
+    bottom: 68px;
+    right: 74px;
+}
+
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.title{
+    font-size: 1.2rem;
+    padding: 6px 15px;
+    background-color: #333;
+    color: var(--white);
+    letter-spacing: 0.3px;
+    border-radius: 2px;
+    font-weight: 400;
+    margin-right: 10px;
+    transition: all 0.3s;
+}

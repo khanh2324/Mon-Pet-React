@@ -35,24 +35,24 @@ body {
 
 ::selection{
     background-color: #202020;
-    color: var(--white-color);
+    color: var(--white);
 }
 
-// // scrollbar
-// html *::-webkit-scrollbar {
-//     border-radius: 0;
-//     width: 8px;
-// }
+// scrollbar
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
 
-// html *::-webkit-scrollbar-thumb {
-//     border-radius: 4px;
-//     background-color: rgba(0, 0, 0, .15);
-// }
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .15);
+}
 
-// html *::-webkit-scrollbar-track {
-//     border-radius: 0;
-//     background-color: rgba(0, 0, 0, 0);
-// }
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
 
 button,
 input,
@@ -64,6 +64,18 @@ input,
 a {
     color: var(--text-color);
     text-decoration: none;
+}
+
+.turn{
+    transform: rotateZ(45deg);
+}
+
+.hide{
+    opacity: 0;
+}
+
+.show{
+    opacity: 1;
 }
 
 //Custom tippy
@@ -82,5 +94,28 @@ body {
 
     .tippy-content{
         padding: 8px 9px;
+    }
+}
+
+
+@keyframes showMenuLink {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideMenuLink {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(30px);
+        opacity: 0;
     }
 }
