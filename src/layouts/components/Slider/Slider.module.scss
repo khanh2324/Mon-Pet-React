@@ -42,3 +42,21 @@
         font-weight: 600;
     }
 }
+
+@media (max-width: 46.1875em){
+    .slider{
+        height: 400px !important;
+    }
+
+    .slider-image{
+        height: 400px !important;
+    }
+
+    .slider-text-heading{
+        font-size: 5.0rem !important;
+    }
+
+    .slider-text-content{
+        padding-top: 16px !important;
+    }
+}

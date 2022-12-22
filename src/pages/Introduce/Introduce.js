@@ -90,8 +90,6 @@ function Introduce() {
 
             <OldLogoIntroduce />
         </>
-
-
     );
 }
 

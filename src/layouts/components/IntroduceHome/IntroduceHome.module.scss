@@ -58,3 +58,19 @@
 .btn-detail:hover{
     transform: scale(1.1);
 }
+
+@media (max-width: 46.1875em){
+    .introduce__content-wrap{
+        margin: unset;
+        padding: 20px;
+    }
+
+    
+.introduce__header{
+    margin-bottom: 10px !important;
+    padding-left: 20px;
+    h2{
+        font-size: 3.2rem !important;
+    }
+}
+}
